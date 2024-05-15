@@ -1,12 +1,13 @@
-import type {Mode, PaletteConfig} from './types'
+import type { Mode, PaletteConfig } from './types';
 
-export const DEFAULT_STOP = 500
-export const DEFAULT_STOPS = [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 1000]
+export const DEFAULT_STOP = 500;
+export const DEFAULT_STOPS = [
+  0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 1000,
+];
 
-export const MODES: Mode[] = [`hex`, `p-3`, 'oklch']
+export const MODES: Mode[] = [`hex`, `p-3`, 'oklch'];
 
 export const DEFAULT_PALETTE_CONFIG: PaletteConfig = {
-  id: ``,
   name: ``,
   value: ``,
   valueStop: DEFAULT_STOP,
@@ -17,7 +18,7 @@ export const DEFAULT_PALETTE_CONFIG: PaletteConfig = {
   lMax: 100,
   useLightness: true,
   mode: MODES[0],
-}
+};
 
 export const RANDOM_PALETTES = [
   {
@@ -40,13 +41,4 @@ export const RANDOM_PALETTES = [
     name: `brand`,
     value: `2522FC`,
   },
-]
-
-export const META = {
-  origin: `https://tints.dev`,
-  title: `Tailwind CSS 11-color Palette Generator and API`,
-  description: `A fast and flexible, HSL-tweakable palette generator and API for Tailwind CSS`,
-}
-
-export const OG_IMAGE_WIDTH = 1200
-export const OG_IMAGE_HEIGHT = 630
+];
