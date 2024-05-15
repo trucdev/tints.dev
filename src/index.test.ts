@@ -1,4 +1,4 @@
-import { createPaletteFromNameValue } from './index';
+import { createPaletteFromNameValue, createPalette } from './index';
 
 const testData = {
   colors: {
@@ -16,10 +16,41 @@ const testData = {
       950: '#090A11',
     },
   },
+  custom: {
+    useLightness: false,
+    s: 10,
+    h: 0,
+
+    green: {
+      50: '#F0F2FF',
+      100: '#E6EAFF',
+      200: '#CCD4FA',
+      300: '#AAB6EE',
+      400: '#8795D9',
+      500: '#5A67A6',
+      600: '#4157C3',
+      700: '#2A45CB',
+      800: '#132FBE',
+      900: '#001A99',
+      950: '#000E57',
+    },
+  },
 };
 
-it('Generate palette', () => {
+it('Generate palette from name and value', () => {
   const output = createPaletteFromNameValue('red', '5A67A6');
-
   expect(output).toEqual(testData.colors);
+});
+
+it('Generate palette with custom params', () => {
+  const output = createPalette(
+    'green',
+    '5A67A6',
+    0,
+    testData.custom.s,
+    100,
+    0,
+    false
+  );
+  expect(output.green).toEqual(testData.custom.green);
 });

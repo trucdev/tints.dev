@@ -35,6 +35,25 @@ const output = createPaletteFromNameValue('red', '5A67A6');
   },
 }
 
+// custom
+const name = 'green';
+const value = '5A67A6';
+const hue = 0;
+const saturation = 10;
+const lightnessMax = 100;
+const lightnessMin = 0;
+const useLightness = false;
+
+const output = createPalette(
+  name,
+  value,
+  hue,
+  saturation,
+  lightnessMax,
+  lightnessMin,
+  useLightness,
+);
+
 // more infomation
 // https://www.tints.dev/red/5A67A6
 
