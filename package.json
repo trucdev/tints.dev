@@ -13,7 +13,7 @@
     "email": "trucdev@gmail.com"
   },
   "license": "MIT",
-  "private": true,
+  "private": false,
   "repository": {
     "url": "https://github.com/trucdev/tints.dev",
     "type": "git"
