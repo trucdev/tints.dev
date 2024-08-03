@@ -15,6 +15,19 @@ const testData = {
       900: '#121421',
       950: '#090A11',
     },
+    primary2: {
+      50: '#EEF0F6',
+      100: '#DEE0ED',
+      200: '#BDC2DB',
+      300: '#9CA3C9',
+      400: '#7B85B7',
+      500: '#5A67A6',
+      600: '#485284',
+      700: '#363D63',
+      800: '#242942',
+      900: '#121421',
+      950: '#090A11',
+    },
   },
   custom: {
     useLightness: false,
@@ -39,7 +52,13 @@ const testData = {
 
 it('Generate palette from name and value', () => {
   const output = createPaletteFromNameValue('red', '5A67A6');
-  expect(output).toEqual(testData.colors);
+  expect(output?.red).toEqual(testData.colors.red);
+});
+
+it('Generate palette from name and value', () => {
+  const output = createPaletteFromNameValue('primary2', '5A67A6');
+
+  expect(output?.primary2).toEqual(testData.colors.primary2);
 });
 
 it('Generate palette with custom params', () => {

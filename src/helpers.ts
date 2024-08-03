@@ -178,7 +178,7 @@ export function isHex(value: string) {
 }
 
 export function isValidName(name: string) {
-  const re = new RegExp(/^[A-Za-z]{3,24}$/i);
+  const re = new RegExp(/^[A-Za-z0-9]{3,24}$/i);
 
   return re.test(name);
 }
