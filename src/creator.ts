@@ -45,7 +45,7 @@ export function createPaletteFromNameValue(name: string, value: string) {
   };
 }
 
-export const createPalette = (
+export function createPalette(
   name: string,
   value: string,
   hue = 0,
@@ -53,7 +53,7 @@ export const createPalette = (
   lightnessMax = 100,
   lightnessMin = 0,
   useLightness = true
-) => {
+) {
   const swatches = createSwatches({
     ...DEFAULT_PALETTE_CONFIG,
     name,
@@ -70,4 +70,4 @@ export const createPalette = (
   return {
     [name]: palette,
   };
-};
+}
